@@ -1,0 +1,31 @@
+<form [formGroup]="deliverymanForm" class="deliveryman-form">
+    <h2>Add a Deliveryman</h2>
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" formControlName="firstname" id="firstname" required>
+    </div>
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" formControlName="lastname" id="lastname" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" id="email" required>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Telephone:</label>
+      <input type="text" formControlName="telephone" id="telephone" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" formControlName="password" id="password" required>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" formControlName="confirmPassword" id="confirmPassword" required>
+    </div>
+    <div class="form-group action-buttons">
+        <button type="button" (click)="cancel()">Cancel</button>
+      <button type="submit" [disabled]="!deliverymanForm.valid" (click)="addDeliveryman()">Add Delivery Man</button>
+    </div>
+</form>
